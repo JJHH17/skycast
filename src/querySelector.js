@@ -14,7 +14,16 @@ export function submitBtn() {
 }
 
 export function locationDiv() {
-    const location = document.querySelector("#location");
+    const location = document.querySelector("#locationHolder");
 
     return location;
+}
+
+// Creates loading pane when API is being created
+export function loadingMsg() {
+    const loading = document.createElement("div");
+    loading.innerText = "Loading...";
+    locationDiv().appendChild(loading);
+
+    return loading;
 }

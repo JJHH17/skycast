@@ -1,10 +1,13 @@
 import "./styles.css";
-import { searchSelect, submitBtn } from "./querySelector";
+import { searchSelect, submitBtn, locationDiv } from "./querySelector";
+import { getWeather } from "./locationSearch";
 
 // Responsible for functionality to search item/location
 submitBtn().addEventListener("click", () => {
     const search = searchSelect();
-
+    const location = locationDiv();
+    
+    location.textContent = search.value;
     
 })
 
