@@ -28,3 +28,10 @@ export function loadingMsg() {
 
     return loading;
 }
+
+export function locationHolder(input) {
+    const locationHolder = document.querySelector("#locationName");
+    locationHolder.innerText = input;
+
+    return locationHolder;
+}
