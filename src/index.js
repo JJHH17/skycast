@@ -6,9 +6,8 @@ import { getWeather } from "./locationSearch";
 submitBtn().addEventListener("click", () => {
     const search = searchSelect();
     const location = locationDiv();
-    
-    location.textContent = search.value;
-    
+
+    getWeather(search.value);
 })
 
 

@@ -1,23 +1,24 @@
 import { loadingMsg } from "./querySelector";
 
 // Responsible for the functionality for searching a location
+const loading = loadingMsg();
 
 export function getWeather(location) {
     fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/
         ${location}?unitGroup=us&include=days%2Chours&key=WE5SWL7PXQVWZVJPQW6JNH35P&contentType=json`, {
-            "method": "get",
+            "method": "GET",
             "mode": "cors",
             "headers": {
             }
         })
         .then(function(response) {
-            loadingMsg();
-            return response.json;
+            loading.style.display = "block";
+            return response.json();
         })
         .then(function(response) {
 
             // Remove loading screen
-            loadingMsg().style.display = "none";
+            loading.style.display = "none";
 
             // Getting the data we need
             console.log(response);
@@ -27,6 +28,6 @@ export function getWeather(location) {
         .catch(err => {
             console.error(err);
             alert("Please enter a valid entry");
-            loadingMsg().style.display = "none";
+            loading.style.display = "none";
         });
 }

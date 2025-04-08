@@ -23,6 +23,7 @@ export function locationDiv() {
 export function loadingMsg() {
     const loading = document.createElement("div");
     loading.innerText = "Loading...";
+    loading.style.display = "none";
     locationDiv().appendChild(loading);
 
     return loading;
