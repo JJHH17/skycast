@@ -1,0 +1,30 @@
+* {
+    margin: 0px
+}
+
+#header {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+#title {
+    grid-column: 5/7;
+}
+
+#login {
+    margin: 0 auto;
+    display: block;
+    grid-column: 9/10;
+    width: 40px;
+    height: 20px;
+    font-size: 10px;
+}
+
+#darkMode {
+    margin: 0 auto;
+    display: block;
+    grid-column: 10/11;
+    width: 50px;
+    height: 30px;
+    font-size: 10px;
+}
