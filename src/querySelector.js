@@ -19,6 +19,20 @@ export function locationDiv() {
     return location;
 }
 
+export function temperatureDiv(temperature) {
+    const temp = document.querySelector("#temp");
+    temp.innerText = "Temperature: " + temperature;
+
+    return temp;
+}
+
+export function conditionsDiv(condition) {
+    const conditions = document.querySelector("#conditions");
+    conditions.innerText = "Conditions: " + condition; 
+
+    return conditions;
+}
+
 // Creates loading pane when API is being created
 export function loadingMsg() {
     const loading = document.createElement("div");
