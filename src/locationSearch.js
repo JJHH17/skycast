@@ -1,4 +1,5 @@
-import { loadingMsg, locationHolder, temperatureDiv, conditionsDiv, minTemp, maxTemp } from "./querySelector";
+import { loadingMsg, locationHolder, temperatureDiv, conditionsDiv, minTemp, maxTemp, dayOne,
+    dayTwo, dayThree, dayFour, dayFive, daySix, daySeven } from "./querySelector";
 
 // Responsible for the functionality for searching a location
 const loading = loadingMsg();
@@ -32,6 +33,16 @@ export function getWeather(location) {
             conditionsDiv(response.days[0].conditions);
             minTemp(response.days[0].tempmin);
             maxTemp(response.days[0].tempmax);
+
+            // Provides telemetry on day temperatures
+            dayOne(response.days[1].datetime, response.days[1].temp, response.days[1].conditions);
+            dayTwo(response.days[2].datetime, response.days[2].temp, response.days[2].conditions);
+            dayThree(response.days[3].datetime, response.days[3].temp, response.days[3].conditions);
+            dayFour(response.days[4].datetime, response.days[4].temp, response.days[4].conditions);
+            dayFive(response.days[5].datetime, response.days[5].temp, response.days[5].conditions);
+            daySix(response.days[6].datetime, response.days[6].temp, response.days[6].conditions);
+            daySeven(response.days[7].datetime, response.days[7].temp, response.days[7].conditions);
+
         })
 
         .catch(err => {

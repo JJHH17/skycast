@@ -69,3 +69,31 @@
     display: grid;
     grid-template-columns: repeat(7, 1fr);
 }
+
+#day1 {
+    grid-column: 1/1;
+}
+
+#day2 {
+    grid-column: 2/2;
+}
+
+#day3 {
+    grid-column: 3/3;
+}
+
+#day4 { 
+    grid-column: 4/4;
+}
+
+#day5 {
+    grid-column: 5/5;
+}
+
+#day6 {
+    grid-column: 6/6;
+}
+
+#day7 {
+    grid-column: 7/7;
+}
