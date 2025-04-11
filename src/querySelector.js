@@ -33,6 +33,22 @@ export function conditionsDiv(condition) {
     return conditions;
 }
 
+// Responsible for min temperature
+export function minTemp(minimum) {
+    const minTemperature = document.querySelector("#minTemp");
+    minTemperature.innerText = "Minumum Temperature: " + minimum;
+
+    return minTemperature;
+}
+
+// Responsible for max temperature
+export function maxTemp(maximum) {
+    const maxTemperature = document.querySelector("#maxTemp");
+    maxTemperature.innerText = "Maximum Temperature:" + maximum;
+
+    return maxTemperature;
+}
+
 // Creates loading pane when API is being created
 export function loadingMsg() {
     const loading = document.createElement("div");

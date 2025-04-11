@@ -1,4 +1,4 @@
-import { loadingMsg, locationHolder, temperatureDiv, conditionsDiv } from "./querySelector";
+import { loadingMsg, locationHolder, temperatureDiv, conditionsDiv, minTemp, maxTemp } from "./querySelector";
 
 // Responsible for the functionality for searching a location
 const loading = loadingMsg();
@@ -30,6 +30,8 @@ export function getWeather(location) {
             locationHolder(response.resolvedAddress);
             temperatureDiv(response.days[0].temp);
             conditionsDiv(response.days[0].conditions);
+            minTemp(response.days[0].tempmin);
+            maxTemp(response.days[0].tempmax);
         })
 
         .catch(err => {
