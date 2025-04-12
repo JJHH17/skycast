@@ -142,3 +142,11 @@ export function daySeven(date, temp, condition) {
     sevenCond.innerText = condition;
 
 }
+
+// Allows us to feed weather icons into UI
+export function iconDisplay(image) {
+    const iconDiv = document.querySelector("#iconHolder");
+    iconDiv.src = `/1st Set - Color/${image}.png`;
+
+    return iconDiv;
+}
