@@ -44,7 +44,7 @@ export function getWeather(location) {
             daySeven(response.days[7].datetime, response.days[7].temp, response.days[7].conditions);
 
             // Feeds an icon to UI
-            iconDisplay();
+            iconDisplay(response.days[0].icon);
 
         })
 

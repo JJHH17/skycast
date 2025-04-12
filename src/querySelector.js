@@ -144,9 +144,9 @@ export function daySeven(date, temp, condition) {
 }
 
 // Allows us to feed weather icons into UI
-export function iconDisplay() {
+export function iconDisplay(input) {
     const iconDiv = document.querySelector("#iconHolder");
-    iconDiv.src = images("./fog.png");
+    iconDiv.src = images(`./${input}.png`);
     iconDiv.alt = "Weather Icon";
 
     return iconDiv;
