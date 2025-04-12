@@ -1,4 +1,5 @@
 // File responsible for selecting items and queries on page
+const images = require.context("./1st Set - Color");
 
 // Selects the search bar
 export function searchSelect() {
@@ -140,13 +141,13 @@ export function daySeven(date, temp, condition) {
     day.innerText = date;
     sevenTemp.innerText = temp;
     sevenCond.innerText = condition;
-
 }
 
 // Allows us to feed weather icons into UI
-export function iconDisplay(image) {
+export function iconDisplay() {
     const iconDiv = document.querySelector("#iconHolder");
-    iconDiv.src = `/1st Set - Color/${image}.png`;
+    iconDiv.src = images("./fog.png");
+    iconDiv.alt = "Weather Icon";
 
     return iconDiv;
 }
