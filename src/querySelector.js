@@ -123,8 +123,8 @@ export function dayFive(date, temp, condition) {
 
 export function daySix(date, temp, condition) {
     const day = document.querySelector("#day6Date");
-    const sixTemp = document.querySelector("#oneTemp");
-    const sixCond = document.querySelector("#oneConditions");
+    const sixTemp = document.querySelector("#sixTemp");
+    const sixCond = document.querySelector("#sixConditions");
 
     day.innerText = date;
     sixTemp.innerText = temp;
@@ -134,8 +134,8 @@ export function daySix(date, temp, condition) {
 
 export function daySeven(date, temp, condition) {
     const day = document.querySelector("#day7Date");
-    const sevenTemp = document.querySelector("#oneTemp");
-    const sevenCond = document.querySelector("#oneConditions");
+    const sevenTemp = document.querySelector("#sevenTemp");
+    const sevenCond = document.querySelector("#sevenConditions");
 
     day.innerText = date;
     sevenTemp.innerText = temp;
