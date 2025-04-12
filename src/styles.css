@@ -7,10 +7,6 @@
     grid-template-columns: repeat(10, 1fr);
 }
 
-#title {
-    grid-column: 5/7;
-}
-
 #login {
     margin: 0 auto;
     display: block;
