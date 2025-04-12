@@ -2,13 +2,13 @@
 
 // Selects the search bar
 export function searchSelect() {
-    const searchBar = document.querySelector("#location");
+    const searchBar = document.querySelector("#locationSearch");
 
     return searchBar;
 }
 
 export function submitBtn() {
-    const button = document.querySelector("#button");
+    const button = document.querySelector("#locationBtn");
 
     return button;
 }

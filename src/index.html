@@ -8,21 +8,19 @@
 <body>
     <div id="header">
         <h1 id="title">SkyCast</h1>
+        <input type="text" id="locationSearch" placeholder="Location">
+        <button type="button" id="locationBtn">Submit</button>
     </div>
 
     <div id="parent">
         <div id="main">
-            <form id="apiForm">
-                <label for="search">Location</label><br>
-                <input type="text" id="location">
-                <button type="button" id="button">submit</button>
-            </form>
-
             <div id="locationHolder">
                 <div id="locationName"></div>
                 <p></p>
                 <p></p>
             </div>
+
+            <div id="graphHolder"></div>
 
             <div id="weatherData">
                 <div id="temp"></div>
