@@ -1,16 +1,9 @@
 // File responsible for handling graph logic
 import Chart from "chart.js/auto";
 
-// Feeds data into myChart
-export function getTempData(data) {
-  const dataInput = data;
-
-  myChart.data.datasets.data = dataInput;
-}
-
 const ctx = document.getElementById('myChart').getContext('2d');
 
-let myChart = new Chart(ctx, {
+let myChart = new Chart(ctx,{
     type: 'line',
     data: {
       labels: ['00:00', '01:00', '02:00', '03:00', '04:00',
@@ -20,7 +13,7 @@ let myChart = new Chart(ctx, {
       ],
       datasets: [{
         label: 'Temperature Changes',
-        data: null,
+        data: [],
         fill: false,
         borderColor: 'rgb(75, 192, 192)',
         tension: 0.1
@@ -40,3 +33,9 @@ let myChart = new Chart(ctx, {
     }
   });
 
+// Feeds data into myChart
+export function getTempData(data) {
+
+  myChart.data.datasets[0].data.push(data);
+  myChart.update();
+}
