@@ -50,7 +50,14 @@ export function getWeather(location) {
             
             // Feeds into graph
             graphHolder().style.display = "block";
-            getTempData(response.days[0].hours[0].temp);
+
+            // Assign array to variable
+            const firstDay = response.days[0];
+            const hourlyTemps = firstDay.hours.map(hour => hour.temp);
+
+            // Feeds above into our graph array
+            getTempData(hourlyTemps);
+
         })
 
         .catch(err => {

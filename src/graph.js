@@ -35,7 +35,6 @@ let myChart = new Chart(ctx,{
 
 // Feeds data into myChart
 export function getTempData(data) {
-
-  myChart.data.datasets[0].data.push(data);
+  myChart.data.datasets[0].data = data;
   myChart.update();
 }
