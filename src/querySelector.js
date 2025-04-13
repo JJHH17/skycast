@@ -151,3 +151,15 @@ export function iconDisplay(input) {
 
     return iconDiv;
 }
+
+export function graphHolder() {
+    const graphDiv = document.querySelector("#graphHolder");
+
+    return graphDiv;
+}
+
+export function myGraph() {
+    const myGraphContainer = document.querySelector("#myChart");
+
+    return myGraphContainer;
+}
