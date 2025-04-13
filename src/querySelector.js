@@ -29,7 +29,7 @@ export function temperatureDiv(temperature) {
 
 export function conditionsDiv(condition) {
     const conditions = document.querySelector("#conditions");
-    conditions.innerText = "Conditions: " + condition; 
+    conditions.innerText =  condition; 
 
     return conditions;
 }
@@ -37,7 +37,7 @@ export function conditionsDiv(condition) {
 // Responsible for min temperature
 export function minTemp(minimum) {
     const minTemperature = document.querySelector("#minTemp");
-    minTemperature.innerText = "Minumum Temperature: " + minimum;
+    minTemperature.innerText = "Min: " + minimum;
 
     return minTemperature;
 }
@@ -45,7 +45,7 @@ export function minTemp(minimum) {
 // Responsible for max temperature
 export function maxTemp(maximum) {
     const maxTemperature = document.querySelector("#maxTemp");
-    maxTemperature.innerText = "Maximum Temperature:" + maximum;
+    maxTemperature.innerText = "Max: " + maximum;
 
     return maxTemperature;
 }
