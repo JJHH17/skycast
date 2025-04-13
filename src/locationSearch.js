@@ -1,5 +1,7 @@
 import { loadingMsg, locationHolder, temperatureDiv, conditionsDiv, minTemp, maxTemp, dayOne,
     dayTwo, dayThree, dayFour, dayFive, daySix, daySeven, iconDisplay} from "./querySelector";
+import { getTempData } from "./graph";
+
 
 // Responsible for the functionality for searching a location
 const loading = loadingMsg();
@@ -45,7 +47,9 @@ export function getWeather(location) {
 
             // Feeds an icon to UI
             iconDisplay(response.days[0].icon);
-
+            
+            // Feeds into graph
+            getTempData(response.days[0].hours[0].temp);
         })
 
         .catch(err => {
