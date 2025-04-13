@@ -51,6 +51,7 @@
     border: 1px solid black;
     grid-row: 1/4;
     grid-column: 3/5;
+    display: none;
 }
 
 #weatherData {

@@ -1,5 +1,5 @@
 import { loadingMsg, locationHolder, temperatureDiv, conditionsDiv, minTemp, maxTemp, dayOne,
-    dayTwo, dayThree, dayFour, dayFive, daySix, daySeven, iconDisplay} from "./querySelector";
+    dayTwo, dayThree, dayFour, dayFive, daySix, daySeven, iconDisplay, graphHolder} from "./querySelector";
 import { getTempData } from "./graph";
 
 
@@ -49,6 +49,7 @@ export function getWeather(location) {
             iconDisplay(response.days[0].icon);
             
             // Feeds into graph
+            graphHolder().style.display = "block";
             getTempData(response.days[0].hours[0].temp);
         })
 
