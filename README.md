@@ -21,5 +21,8 @@ This project uses Webpack with CSS, image and HTML loaders.
 - Install CSS handlers:
 ``` npm install --save-dev style-loader css-loader ```
 
+- Install Chart.js (for displaying weather chart):
+``` npm install chart.js ```
+
 - (Optional Dev Server handler (for development)):
 ``` npm install --save-dev webpack-dev-server ```
