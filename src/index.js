@@ -9,7 +9,7 @@ modalTrigger();
 // Responsible for functionality to search item/location
 submitBtn().addEventListener("click", () => {
     const search = searchSelect();
-
+    defaultTrigger(); // Reverts search back to header of page
     getWeather(search.value);
 })
 

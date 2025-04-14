@@ -14,8 +14,11 @@ export function modalTrigger() {
 
 // Reverts page to default setting
 export function defaultTrigger() {
-    const defaultSearch = document.querySelector("#locationSearch");
-    const defaultBtn = document.querySelector("#locationBtn");
+    const defaultSearch = document.querySelector("#modalSearch");
+    const defaultBtn = document.querySelector("#modalBtn");
+
+    defaultSearch.id = "locationSearch";
+    defaultBtn.id = "locationBtn";
 
     return defaultSearch;
     return defaultBtn;
