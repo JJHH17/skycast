@@ -1,6 +1,12 @@
 // File responsible for selecting items and queries on page
 const images = require.context("./1st Set - Color");
 
+export function headerSelect() {
+    const header = document.querySelector("#header");
+
+    return header;
+}
+
 // Selects the search bar
 export function searchSelect() {
     const searchBar = document.querySelector("#locationSearch") || document.querySelector("#modalSearch");
