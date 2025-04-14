@@ -1,5 +1,5 @@
 import { loadingMsg, locationHolder, temperatureDiv, conditionsDiv, minTemp, maxTemp, dayOne,
-    dayTwo, dayThree, dayFour, dayFive, daySix, daySeven, iconDisplay, graphHolder} from "./querySelector";
+    dayTwo, dayThree, dayFour, dayFive, daySix, daySeven, iconDisplay, graphHolder, mainDiv } from "./querySelector";
 import { getTempData } from "./graph";
 
 
@@ -25,6 +25,9 @@ export function getWeather(location) {
 
             // Remove loading screen
             loading.style.display = "none";
+
+            // Loads weather page
+            mainDiv().style.display = "grid";
 
             // Getting the data we need
             console.log(response);

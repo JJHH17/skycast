@@ -14,6 +14,12 @@ export function submitBtn() {
     return button;
 }
 
+export function mainDiv() {
+    const main = document.querySelector("#main");
+
+    return main;
+}
+
 export function locationDiv() {
     const location = document.querySelector("#locationHolder");
 

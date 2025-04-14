@@ -30,7 +30,7 @@
 #main {
     grid-column: 2/6;
     grid-row: 2/4; 
-    display: grid;
+    display: none;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
     border: 1px solid black;
