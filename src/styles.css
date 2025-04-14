@@ -20,6 +20,17 @@
     grid-column: 6/7;
 }
 
+#modalSearch {
+    grid-column: 4/6;
+    grid-row: 2/3;
+    width: 75%;
+    justify-self: end;
+}
+
+#modalBtn {
+    grid-column: 6/7;
+    grid-row: 2/3;
+}
 
 #parent {
     display: grid;
