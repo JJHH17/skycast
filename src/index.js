@@ -4,7 +4,7 @@ import { getWeather } from "./locationSearch";
 import { modalTrigger, defaultTrigger } from "./searchModal";
 import Chart from "chart.js/auto";
 
-defaultTrigger();
+modalTrigger();
 
 // Responsible for functionality to search item/location
 submitBtn().addEventListener("click", () => {

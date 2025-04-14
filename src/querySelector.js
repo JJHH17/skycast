@@ -3,13 +3,13 @@ const images = require.context("./1st Set - Color");
 
 // Selects the search bar
 export function searchSelect() {
-    const searchBar = document.querySelector("#locationSearch");
+    const searchBar = document.querySelector("#locationSearch") || document.querySelector("#modalSearch");
 
     return searchBar;
 }
 
 export function submitBtn() {
-    const button = document.querySelector("#locationBtn");
+    const button = document.querySelector("#locationBtn") || document.querySelector("#modalBtn");
 
     return button;
 }
