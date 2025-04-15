@@ -10,7 +10,7 @@ function pTag() {
 }
 
 // Removes p tag when default view is shown
-function pTagRemove() {
+export function pTagRemove() {
     const tag = document.querySelector("#pTag");
     tag.remove();
 }
@@ -20,10 +20,11 @@ export function modalTrigger() {
     const modalSearch = document.querySelector("#locationSearch");
     const modalBtn = document.querySelector("#locationBtn");
 
-    pTag();
-
-    modalSearch.id = "modalSearch";
-    modalBtn.id = "modalBtn";
+    if (modalSearch && modalBtn) {
+        pTag();
+        modalSearch.id = "modalSearch";
+        modalBtn.id = "modalBtn";
+    }
 }
 
 // Reverts page to default setting
@@ -31,8 +32,8 @@ export function defaultTrigger() {
     const defaultSearch = document.querySelector("#modalSearch");
     const defaultBtn = document.querySelector("#modalBtn");
 
-    pTagRemove();
-
-    defaultSearch.id = "locationSearch";
-    defaultBtn.id = "locationBtn";
+    if (defaultSearch && defaultBtn) {
+        defaultSearch.id = "locationSearch";
+        defaultBtn.id = "locationBtn";
+    }
 }

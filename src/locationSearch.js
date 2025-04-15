@@ -1,6 +1,7 @@
 import { loadingMsg, locationHolder, temperatureDiv, conditionsDiv, minTemp, maxTemp, dayOne,
     dayTwo, dayThree, dayFour, dayFive, daySix, daySeven, iconDisplay, graphHolder, mainDiv } from "./querySelector";
 import { getTempData } from "./graph";
+import { pTagRemove } from "./searchModal";
 
 
 // Responsible for the functionality for searching a location
@@ -25,6 +26,8 @@ export function getWeather(location) {
 
             // Remove loading screen
             loading.style.display = "none";
+
+            pTagRemove()
 
             // Loads weather page
             mainDiv().style.display = "grid";
