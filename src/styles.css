@@ -49,6 +49,10 @@
     color: black;
 }
 
+#temp, #conditions, #minTemp, #maxTemp {
+    background-color: rgba(0, 0, 0, 0.0);
+}
+
 #parent {
     display: grid;
     grid-template-columns: 0.3fr repeat(4, 1fr) 0.3fr;
@@ -59,29 +63,35 @@
 #main {
     grid-column: 2/6;
     grid-row: 2/4; 
+    gap: 5px;
     display: none;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    border: 1px solid black;
     height: 550px;
 }
 
 #locationHolder {
     grid-row: 1/2;
     grid-column: 3/5;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 #locationName {
+    padding-top: 10px;
+    padding-bottom: 5px;
     text-align: center;
     font-size: large;
+    background-color: rgba(0, 0, 0, 0.0);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
 #iconHolder {
     display: block;
     margin: auto;
-    width: 35%;
-    height: 35%;
+    width: 5rem;
+    height: 5rem;
+    background-color: rgba(0, 0, 0, 0.0);
+
 }
 
 #graphHolder {
@@ -94,10 +104,12 @@
 }
 
 #weatherData {
-    grid-row: 2/3;
-    grid-column: 3/5;
-    border: 1px solid black;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    grid-row: 1/2;
+    grid-column: 1/3;
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -112,14 +124,13 @@
     display: flex;
     flex-direction: column;
     grid-template-columns: repeat(7, 1fr);
-    gap: 1em;
+    gap: 5px;
     overflow-y: auto;
     overflow-x: hidden;
 }
 
 #day1 {
     grid-column: 1/1;
-    border-bottom: 1px solid black;
 }
 
 #day2 {
