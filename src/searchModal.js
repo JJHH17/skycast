@@ -9,10 +9,17 @@ function pTag() {
     tag.id = "pTag";
 }
 
+// Returns p tag if it exists
+export function pTagCheck() {
+    const tag = document.querySelector("#pTag");
+
+    return tag;
+}
+
 // Removes p tag when default view is shown
 export function pTagRemove() {
     const tag = document.querySelector("#pTag");
-    tag.remove();
+    tag.style.display = "none";
 }
 
 // Reverts search to a modal (upon page being initialized)
