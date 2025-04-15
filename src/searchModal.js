@@ -12,7 +12,7 @@ export function modalView() {
 // Reverts page to default setting
 export function defaultTrigger() {
     const defaultSearch = document.querySelector("#locationSearch");
-    const defaultBtn = document.querySelector("#locationSearch");
+    const defaultBtn = document.querySelector("#locationBtn");
 
     defaultSearch.style.display = "block";
     defaultBtn.style.display = "block";
@@ -30,4 +30,10 @@ export function modalSearch() {
     const search = document.querySelector("#modalSearch");
 
     return search;
+}
+
+// Hides modal
+export function hideModal() {
+    const modal = document.querySelector("#modalHolder");
+    modal.style.display = "none";
 }
