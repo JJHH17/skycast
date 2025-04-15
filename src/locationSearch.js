@@ -27,10 +27,6 @@ export function getWeather(location) {
             // Remove loading screen
             loading.style.display = "none";
 
-            if (pTagCheck()) {
-                pTagRemove()
-            }
-
             // Loads weather page
             mainDiv().style.display = "grid";
 
