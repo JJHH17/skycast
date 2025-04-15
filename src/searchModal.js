@@ -1,19 +1,33 @@
 // Responsible for manipulating search modal DOM elements
 import { headerSelect } from "./querySelector";
 
-// Removes p tag when default view is shown
-export function pTagRemove() {
-    const tag = document.querySelector("#pTag");
-    tag.style.display = "none";
+export function modalView() {
+    const defaultSearch = document.querySelector("#locationSearch");
+    const defaultBtn = document.querySelector("#locationBtn");
+
+    defaultSearch.style.display = "none";
+    defaultBtn.style.display = "none";
 }
 
 // Reverts page to default setting
 export function defaultTrigger() {
-    const defaultSearch = document.querySelector("#modalSearch");
-    const defaultBtn = document.querySelector("#modalBtn");
+    const defaultSearch = document.querySelector("#locationSearch");
+    const defaultBtn = document.querySelector("#locationSearch");
 
-    if (defaultSearch && defaultBtn) {
-        defaultSearch.id = "locationSearch";
-        defaultBtn.id = "locationBtn";
-    }
+    defaultSearch.style.display = "block";
+    defaultBtn.style.display = "block";
+}
+
+// Submit button element
+export function modalBtn() {
+    const search = document.querySelector("#modalBtn");
+
+    return search;
+}
+
+// Search element
+export function modalSearch() {
+    const search = document.querySelector("#modalSearch");
+
+    return search;
 }

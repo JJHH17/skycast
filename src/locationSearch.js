@@ -1,12 +1,14 @@
 import { loadingMsg, locationHolder, temperatureDiv, conditionsDiv, minTemp, maxTemp, dayOne,
     dayTwo, dayThree, dayFour, dayFive, daySix, daySeven, iconDisplay, graphHolder, mainDiv } from "./querySelector";
 import { getTempData } from "./graph";
-import { pTagRemove, pTagCheck } from "./searchModal";
+import { modalView, defaultTrigger } from "./searchModal";
 
 
 // Responsible for the functionality for searching a location
 const loading = loadingMsg();
 
+// Initial page view upon load
+modalView();
 
 export function getWeather(location) {
     fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/
