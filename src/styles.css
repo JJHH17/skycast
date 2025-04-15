@@ -22,6 +22,14 @@
     grid-column: 6/7;
 }
 
+#modalHolder {
+    text-align: center;
+    padding: 30px;
+    margin-top: 30px;
+    border: 1px solid black;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
 #parent {
     display: grid;
     grid-template-columns: 0.3fr repeat(4, 1fr) 0.3fr;
