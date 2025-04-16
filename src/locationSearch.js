@@ -1,6 +1,6 @@
 import { loadingMsg, locationHolder, temperatureDiv, conditionsDiv, minTemp, maxTemp, dayOne,
     dayTwo, dayThree, dayFour, dayFive, daySix, daySeven, iconDisplay, graphHolder, mainDiv } from "./querySelector";
-import { getTempData } from "./graph";
+import { getTempData, getHumidityData } from "./graph";
 import { modalView, defaultTrigger } from "./searchModal";
 
 
@@ -54,16 +54,15 @@ export function getWeather(location) {
             // Feeds an icon to UI
             iconDisplay(response.days[0].icon);
             
-            // Feeds into graph
-            graphHolder().style.display = "block";
-
             // Assign array to variable
             const firstDay = response.days[0];
             const hourlyTemps = firstDay.hours.map(hour => hour.temp);
+            const hourlyHumidity = firstDay.hours.map(hour => hour.humidity);
+
 
             // Feeds above into our graph array
             getTempData(hourlyTemps);
-
+            getHumidityData(hourlyHumidity)
         })
 
         .catch(err => {
