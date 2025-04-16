@@ -12,10 +12,10 @@ let myChart = new Chart(ctx,{
         '19:00', '20:00', '21:00', '22:00', '23:00',
       ],
       datasets: [{
-        label: 'Temperature Changes',
+        label: 'Temperature',
         data: [],
-        fill: false,
-        borderColor: 'rgb(75, 192, 192)',
+        fill: true,
+        borderColor: 'rgb(5, 24, 24)',
         tension: 0.1
       }]
     },
@@ -27,7 +27,7 @@ let myChart = new Chart(ctx,{
         },
         title: {
           display: true,
-          text: 'Temperature Splits'
+          text: 'Day Temperature Change'
         }
       }
     }
