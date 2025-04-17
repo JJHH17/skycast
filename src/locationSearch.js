@@ -1,6 +1,5 @@
-import { hideLoading, locationHolder, temperatureDiv, conditionsDiv, minTemp, maxTemp, dayOne,
-    dayTwo, dayThree, dayFour, dayFive, daySix, daySeven, iconDisplay, loadingDisplay, mainDivDisplay,
-    days } from "./querySelector";
+import { hideLoading, locationHolder, temperatureDiv, conditionsDiv, minTemp, maxTemp, iconDisplay, loadingDisplay, 
+    mainDivDisplay, days } from "./querySelector";
 import { getTempData, getHumidityData } from "./graph";
 import { modalView, defaultTrigger } from "./searchModal";
 
@@ -12,8 +11,6 @@ export function getWeather(location) {
     fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?unitGroup=us&include=days%2Chours&key=WE5SWL7PXQVWZVJPQW6JNH35P&contentType=json`, {
             "method": "GET",
             "mode": "cors",
-            "headers": {
-            }
         })
 
         .then(function(response) {
@@ -62,6 +59,6 @@ export function getWeather(location) {
         .catch(err => {
             console.error(err);
             alert("Please enter a valid entry");
-            loading.style.display = "none";
+            hideLoading();
         });
 }
