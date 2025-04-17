@@ -1,11 +1,9 @@
-import { loadingMsg, locationHolder, temperatureDiv, conditionsDiv, minTemp, maxTemp, dayOne,
-    dayTwo, dayThree, dayFour, dayFive, daySix, daySeven, iconDisplay, graphHolder, mainDiv } from "./querySelector";
+import { hideLoading, locationHolder, temperatureDiv, conditionsDiv, minTemp, maxTemp, dayOne,
+    dayTwo, dayThree, dayFour, dayFive, daySix, daySeven, iconDisplay, graphHolder, mainDiv,
+    loadingDisplay } from "./querySelector";
 import { getTempData, getHumidityData } from "./graph";
 import { modalView, defaultTrigger } from "./searchModal";
 
-
-// Responsible for the functionality for searching a location
-const loading = loadingMsg();
 
 // Initial page view upon load
 modalView();
@@ -20,14 +18,14 @@ export function getWeather(location) {
         })
 
         .then(function(response) {
-            loading.style.display = "block";
+            loadingDisplay();
             return response.json();
         })
 
         .then(function(response) {
 
             // Remove loading screen
-            loading.style.display = "none";
+            hideLoading();
 
             // Loads weather page
             mainDiv().style.display = "grid";

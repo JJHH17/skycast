@@ -63,10 +63,17 @@ export function maxTemp(maximum) {
 }
 
 // Creates loading pane when API is being created
-export function loadingMsg() {
+export function hideLoading() {
+    const loading = document.querySelector("#loading");
+    loading.id = "loading";
+    loading.remove();
+}
+
+export function loadingDisplay() {
     const loading = document.createElement("div");
     loading.innerText = "Loading...";
-    loading.style.display = "none";
+    loading.id = "loading";
+    loading.display = "block";
     locationDiv().appendChild(loading);
 
     return loading;
