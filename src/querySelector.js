@@ -79,7 +79,7 @@ export function loadingDisplay() {
     const loading = document.createElement("div");
     loading.innerText = "Loading...";
     loading.id = "loading";
-    loading.display = "block";
+    loading.style.display = "block";
     locationDiv().appendChild(loading);
 
     return loading;
