@@ -42,7 +42,7 @@ export function getWeather(location) {
             // Provides telemetry on day temperatures
             days.forEach((func, index) => {
                 const day = response.days[index + 1];
-                func(day.daytime, day.temp, day.conditions);
+                func(day.datetime, day.temp, day.conditions);
             });
 
             // Feeds an icon to UI
