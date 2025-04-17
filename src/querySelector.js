@@ -188,3 +188,5 @@ export function myGraph() {
 
     return myGraphContainer;
 }
+
+export const days = [dayOne, dayTwo, dayThree, dayFour, dayFive, daySix, daySeven];

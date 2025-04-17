@@ -1,6 +1,6 @@
 import { hideLoading, locationHolder, temperatureDiv, conditionsDiv, minTemp, maxTemp, dayOne,
-    dayTwo, dayThree, dayFour, dayFive, daySix, daySeven, iconDisplay, graphHolder, mainDiv,
-    loadingDisplay, mainDivDisplay } from "./querySelector";
+    dayTwo, dayThree, dayFour, dayFive, daySix, daySeven, iconDisplay, loadingDisplay, mainDivDisplay,
+    days } from "./querySelector";
 import { getTempData, getHumidityData } from "./graph";
 import { modalView, defaultTrigger } from "./searchModal";
 
@@ -9,8 +9,7 @@ import { modalView, defaultTrigger } from "./searchModal";
 modalView();
 
 export function getWeather(location) {
-    fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/
-        ${location}?unitGroup=us&include=days%2Chours&key=WE5SWL7PXQVWZVJPQW6JNH35P&contentType=json`, {
+    fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?unitGroup=us&include=days%2Chours&key=WE5SWL7PXQVWZVJPQW6JNH35P&contentType=json`, {
             "method": "GET",
             "mode": "cors",
             "headers": {
@@ -41,13 +40,10 @@ export function getWeather(location) {
             maxTemp(response.days[0].tempmax);
 
             // Provides telemetry on day temperatures
-            dayOne(response.days[1].datetime, response.days[1].temp, response.days[1].conditions);
-            dayTwo(response.days[2].datetime, response.days[2].temp, response.days[2].conditions);
-            dayThree(response.days[3].datetime, response.days[3].temp, response.days[3].conditions);
-            dayFour(response.days[4].datetime, response.days[4].temp, response.days[4].conditions);
-            dayFive(response.days[5].datetime, response.days[5].temp, response.days[5].conditions);
-            daySix(response.days[6].datetime, response.days[6].temp, response.days[6].conditions);
-            daySeven(response.days[7].datetime, response.days[7].temp, response.days[7].conditions);
+            days.forEach((func, index) => {
+                const day = response.days[index + 1];
+                func(day.daytime, day.temp, day.conditions);
+            });
 
             // Feeds an icon to UI
             iconDisplay(response.days[0].icon);
