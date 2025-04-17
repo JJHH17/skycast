@@ -1,6 +1,6 @@
 import { hideLoading, locationHolder, temperatureDiv, conditionsDiv, minTemp, maxTemp, dayOne,
     dayTwo, dayThree, dayFour, dayFive, daySix, daySeven, iconDisplay, graphHolder, mainDiv,
-    loadingDisplay } from "./querySelector";
+    loadingDisplay, mainDivDisplay } from "./querySelector";
 import { getTempData, getHumidityData } from "./graph";
 import { modalView, defaultTrigger } from "./searchModal";
 
@@ -28,8 +28,8 @@ export function getWeather(location) {
             hideLoading();
 
             // Loads weather page
-            mainDiv().style.display = "grid";
-
+            mainDivDisplay();
+            
             // Getting the data we need
             console.log(response);
 

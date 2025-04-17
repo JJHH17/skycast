@@ -26,6 +26,12 @@ export function mainDiv() {
     return main;
 }
 
+export function mainDivDisplay() {
+    const main = document.querySelector("#main");
+
+    main.style.display = "grid";
+}
+
 export function locationDiv() {
     const location = document.querySelector("#locationHolder");
 
