@@ -40,7 +40,7 @@ export function locationDiv() {
 
 export function temperatureDiv(temperature) {
     const temp = document.querySelector("#temp");
-    temp.innerText = "Temperature: " + temperature;
+    temp.innerText = "Temperature: " + temperature + "℃";
 
     return temp;
 }
@@ -55,7 +55,7 @@ export function conditionsDiv(condition) {
 // Responsible for min temperature
 export function minTemp(minimum) {
     const minTemperature = document.querySelector("#minTemp");
-    minTemperature.innerText = "Min: " + minimum;
+    minTemperature.innerText = "Min: " + minimum + "℃";
 
     return minTemperature;
 }
@@ -63,7 +63,7 @@ export function minTemp(minimum) {
 // Responsible for max temperature
 export function maxTemp(maximum) {
     const maxTemperature = document.querySelector("#maxTemp");
-    maxTemperature.innerText = "Max: " + maximum;
+    maxTemperature.innerText = "Max: " + maximum + "℃";
 
     return maxTemperature;
 }
@@ -98,7 +98,7 @@ export function dayOne(date, temp, condition) {
     const oneCond = document.querySelector("#oneConditions");
 
     day.innerText = date;
-    oneTemp.innerText = temp;
+    oneTemp.innerText = temp + "℃";
     oneCond.innerText = condition;
 
 }
@@ -109,7 +109,7 @@ export function dayTwo(date, temp, condition) {
     const twoCond = document.querySelector("#twoConditions");
 
     day.innerText = date;
-    twoTemp.innerText = temp;
+    twoTemp.innerText = temp + "℃";
     twoCond.innerText = condition;
 
 }
@@ -120,7 +120,7 @@ export function dayThree(date, temp, condition) {
     const threeCond = document.querySelector("#threeConditions");
 
     day.innerText = date;
-    threeTemp.innerText = temp;
+    threeTemp.innerText = temp + "℃";
     threeCond.innerText = condition;
 
 }
@@ -131,7 +131,7 @@ export function dayFour(date, temp, condition) {
     const fourCond = document.querySelector("#fourConditions");
 
     day.innerText = date;
-    fourTemp.innerText = temp;
+    fourTemp.innerText = temp + "℃";
     fourCond.innerText = condition;
 
 }
@@ -142,7 +142,7 @@ export function dayFive(date, temp, condition) {
     const fiveCond = document.querySelector("#fiveConditions");
 
     day.innerText = date;
-    fiveTemp.innerText = temp;
+    fiveTemp.innerText = temp + "℃";
     fiveCond.innerText = condition;
 
 }
@@ -153,7 +153,7 @@ export function daySix(date, temp, condition) {
     const sixCond = document.querySelector("#sixConditions");
 
     day.innerText = date;
-    sixTemp.innerText = temp;
+    sixTemp.innerText = temp + "℃";
     sixCond.innerText = condition;
 
 }
@@ -164,7 +164,7 @@ export function daySeven(date, temp, condition) {
     const sevenCond = document.querySelector("#sevenConditions");
 
     day.innerText = date;
-    sevenTemp.innerText = temp;
+    sevenTemp.innerText = temp + "℃";
     sevenCond.innerText = condition;
 }
 
