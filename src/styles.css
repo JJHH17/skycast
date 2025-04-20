@@ -105,12 +105,12 @@
     gap: 20px;
     padding: 1rem;
 }
-  
+
 .chartBox {
     flex: 1 1 400px;
     min-width: 300px;
     min-height: 300px;
-    max-width: 400px;
+    max-width: 700px;
     width: 100%;
     height: auto;
     box-sizing: border-box;
@@ -119,6 +119,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    color-scheme: black;
 }
 
 .chartBox canvas {
