@@ -149,8 +149,6 @@
     flex-direction: column;
     grid-template-columns: repeat(7, 1fr);
     gap: 5px;
-    overflow-y: auto;
-    overflow-x: hidden;
     text-align: center;
     color: white;
 }
