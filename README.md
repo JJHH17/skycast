@@ -2,10 +2,9 @@
 A weather application for building web development experience.
 
 # Project goals:
-- Develop clean, nice UI.
-- Work with API's.
-- Understand error handling
-- Utilize local storage for aspects such as search history
+- Develop clean UI.
+- Work with API's - Weather and Graph API's
+- Develop error handling
 - Location based searches
 - Allow user to enter a location, pulls weather from API
 
