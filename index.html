@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyCast</title>
+<script defer src="main.js"></script></head>
+<body>
+    <div id="header">
+        <h1 id="title">SkyCast</h1>
+        <input type="text" id="locationSearch" placeholder="Location">
+        <button type="button" id="locationBtn">Submit</button>
+    </div>
+
+    <div id="modalHolder">
+        <p id="pTag">Find a Forecast</p>
+        <input type="text" id="modalSearch" placeholder="Location">
+        <button type="button" id="modalBtn">Submit</button>
+
+    </div>
+
+    <div id="parent">
+        <div id="main">
+            <div id="locationHolder">
+                <div id="locationName"></div>
+                <img id="iconHolder">
+            </div>
+
+            <div id="graphHolder">
+                <div class="chartBox">
+                    <canvas id="myChart" width="100%" height="100%"></canvas>
+                </div>
+                <div class="chartBox">
+                    <canvas id="humidityChart" width="100%" height="100%"></canvas>
+                </div>
+            </div>
+
+            <div id="weatherData">
+                <div id="temp"></div>
+                <div id="conditions"></div>
+                <div id="minTemp"></div>
+                <div id="maxTemp"></div>
+            </div>
+
+            <div id="scrollBar">
+                <p id="scrollTitle">Seven Day Forecast</p>
+                <div id="day1">
+                    <div id="day1Date"></div>
+                    <div id="oneTemp"></div>
+                    <div id="oneConditions"></div>
+                </div>
+                <div id="day2">
+                    <div id="day2Date"></div>
+                    <div id="twoTemp"></div>
+                    <div id="twoConditions"></div>
+                </div>
+                <div id="day3">
+                    <div id="day3Date"></div>
+                    <div id="threeTemp"></div>
+                    <div id="threeConditions"></div>
+                </div>
+                <div id="day4">
+                    <div id="day4Date"></div>
+                    <div id="fourTemp"></div>
+                    <div id="fourConditions"></div>
+                </div>
+                <div id="day5">
+                    <div id="day5Date"></div>
+                    <div id="fiveTemp"></div>
+                    <div id="fiveConditions"></div>
+                </div>
+                <div id="day6">
+                    <div id="day6Date"></div>
+                    <div id="sixTemp"></div>
+                    <div id="sixConditions"></div>
+                </div>
+                <div id="day7">
+                    <div id="day7Date"></div>
+                    <div id="sevenTemp"></div>
+                    <div id="sevenConditions"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
